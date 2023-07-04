@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>team</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    body {
+        min-height: 100vh;
+        background-image:url(wallpaper.png);
+        background-position: center;
+        background-size: cover;} 
+    h3 , h4 {
+        color: aliceblue;
+    }
+    </style>
+   <body class="p-3 m-0 border-0 bd-example">
+
+    <!-- Example Code -->
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a href="#"><img src="logo.png" style="border-radius: 50%; width: 50px; height: 50px;" stralt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AQUOS STORE</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Produk Kami
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="ml.html">MOBILE LENGEND</a></li>
+                    <li><a class="dropdown-item" href="pubg.html">PUBG MOBILE</a></li>
+                    <li><a class="dropdown-item" href="codm.html">CODM MOBILE</a></li>
+                    <li><a class="dropdown-item" href="valorant.html">VALORANT</a></li>
+                  </ul>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link active" href="team.html">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+<header>
+    <Style>
+        body{margin-top:20px;}
+
+.team-list img {
+  width: 50%;
+}
+
+.team-list .content {
+  width: 50%;
+}
+
+.team-list .content .follow {
+  position: absolute;
+  bottom: 24px;
+}
+
+.team-list:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.team, .team-list {
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.team .content .title, .team-list .content .title {
+  font-size: 18px;
+}
+
+.team .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .member-position, .team .team-social {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  left: 0;
+  margin: auto 10%;
+  z-index: 99;
+}
+
+.team .team-social {
+  bottom: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.team:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.team:hover .overlay {
+  opacity: 0.6;
+}
+
+.team:hover .team-social {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .team-list img,
+  .team-list .content {
+    width: 100%;
+    float: none !important;
+  }
+  .team-list img .follow,
+  .team-list .content .follow {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.social-icon.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd;
+}
+.social-icon li a {
+    color: #35404e;
+    border: 1px solid #35404e;
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.rounded {
+    border-radius: 5px !important;
+}
+
+.para-desc {
+    max-width: 600px;
+}
+.text-muted {
+    color: #8492a6 !important;
+}
+
+.section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+    </Style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+<div class="container bootdey">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="section-title mb-4 pb-2">
+                    <h4 class="title mb-4">Our Team</h4>
+                    <p class="text-muted para-desc mx-auto mb-0"></p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://avatars.githubusercontent.com/u/127173881?s=400&u=e79da10368be7fb7c451b590420d95a7fcf2593f&v=4" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Husni</h4>
+                        <small class="text-muted"></small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/muhammad.husni.58958343/" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/husni4r/" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://mail.google.com/mail/u/0/#sent?compose=CllgCJZdkmJtGcwxTMbsRDzZVPXDqMpgZhgLlGgSSlxMKcczFmTnJbWDBnPSChwSHvBXrSBQQDV" class="rounded"><i class="mdi mdi-whatsapp" title="whatsapp"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/husni78" class="rounded"><i class="mdi mdi-github" title="github"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://avatars.githubusercontent.com/u/126541648?v=4" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Hasanul Basri</h4>
+                        <small class="text-muted"></small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                          <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/hasanul.basri.1420?mibextid=ZbWKwL" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="husni25122000@gmail.com" class="rounded"><i class="mdi mdi-whatsapp" title="whatsapp"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/hasanulbasri" class="rounded"><i class="mdi mdi-github" title="github"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://avatars.githubusercontent.com/u/118426961?v=4" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Rajulul Anshar</h4>
+                        <small class="text-muted"></small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                          <li class="list-inline-item"><a href="https://www.facebook.com/rajulul.anshar" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                          <li class="list-inline-item"><a href="https://instagram.com/r_anshr_?igshid=NGExMmI2YTkyZg==" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                          <li class="list-inline-item"><a href="husni25122000@gmail.com" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                          <li class="list-inline-item"><a href="https://github.com/rajululanshar" class="rounded"><i class="mdi mdi-github" title="github"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://avatars.githubusercontent.com/u/138543052?s=400&u=2c7f56b23fe3f3f04d65692b1e1d196beb18ef56&v=4" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Risyad Rahnanda</h4>
+                        <small class="text-muted"></small>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                          <li class="list-inline-item"><a href="https://www.facebook.com/bang.ris.5686" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                          <li class="list-inline-item"><a href="https://www.instagram.com/husni4r/" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                          <li class="list-inline-item"><a href="www.husni25122000@gmail.com" class="rounded"><i class="mdi mdi-gmail" title="gmail"></i></a></li>
+                          <li class="list-inline-item"><a href="https://github.com/risyad04" class="rounded"><i class="mdi mdi-github" title="github"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div>
+</header>

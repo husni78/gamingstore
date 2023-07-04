@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css'>
+    <title>Valorant</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    body {
+        min-height: 100vh;
+        background-image:url(wallpaper.png);
+        background-position: center;
+        background-size: cover;}
+
+:root {
+    --font1: 'Heebo', sans-serif;
+    --font2: 'Fira Sans Extra Condensed', sans-serif;
+    --font3: 'Roboto', sans-serif;
+
+    --btnbg: #ffcc00;
+    --btnfontcolor: rgb(61, 61, 61);
+    --btnfontcolorhover: rgb(255, 255, 255);
+    --btnbghover: #ffc116;
+    --btnactivefs: rgb(241, 195, 46);
+
+
+    --label-index: #960796;
+    --danger-index: #5bc257;
+/* PAGINATE */
+    --link-color: #000;
+    --link-color-hover: #fff;
+    --bg-content-color: #ffcc00;
+
+}
+
+.container-fluid {
+    max-width: 1400px;
+
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    border: 0;
+    border-radius: 1rem;
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px);
+}
+
+
+.card h5 {
+    overflow: hidden;
+    height: 55px;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.card h5 a {
+  color: black;
+  text-decoration: none;
+} 
+
+.card-img-top {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: contain;
+    padding: 30px;
+}
+
+.card h2 {
+    font-size: 1rem;
+}
+
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+/* Centered text */
+.label-top {
+    position: absolute;
+    background-color: var(--label-index);
+    color: #fff;
+    top: 8px;
+    right: 8px;
+    padding: 5px 10px 5px 10px;
+    font-size: .7rem;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.top-right {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 900;
+    background: #8bc34a;
+    line-height: 90px;
+    text-align: center;
+    color: white;
+}
+
+.top-right span {
+    display: inline-block;
+    vertical-align: middle;
+    /* line-height: normal; */
+    /* padding: 0 25px; */
+}
+
+.aff-link {
+    /* text-decoration: overline; */
+    font-weight: 500;
+}
+
+.over-bg {
+    background: rgba(53, 53, 53, 0.85);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px;
+}
+.bold-btn {
+
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 50px 5px 50px;
+}
+.box .btn {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1025px) {
+    .btn {
+        padding: 5px 40px 5px 40px;
+    }
+}
+@media (max-width: 250px) {
+    .btn {
+        padding: 5px 30px 5px 30px;
+    }
+}
+
+/* START BUTTON */
+.btn-warning {
+    background: var(--btnbg);
+    color: var(--btnfontcolor);
+    fill: #ffffff;
+    border: none;
+    text-decoration: none;
+    outline: 0;
+    /* box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25); */
+    border-radius: 100px;
+}
+.btn-warning:hover {
+    background: var(--btnbghover);
+    color: var(--btnfontcolorhover);
+    /* box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35); */
+}
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    background: var(--btnbghover);
+    color: var(--btnfontcolorhover);
+    /* box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35); */
+}
+.btn-warning:active:focus {
+    box-shadow: 0 0 0 0.25rem var(--btnactivefs);
+}
+.btn-warning:active {
+    background: var(--btnbghover);
+    color: var(--btnfontcolorhover);
+    /* box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35); */
+}
+
+/* END BUTTON */
+
+.bg-success {
+    font-size: 1rem;
+    background-color: var(--btnbg)!important;
+    color: var(--btnfontcolor)!important;
+}
+.bg-danger {
+    font-size: 1rem;
+}
+
+
+.price-hp {
+    font-size: 1rem;
+    font-weight: 600;
+    color: darkgray;
+}
+
+.amz-hp {
+    font-size: .7rem;
+    font-weight: 600;
+    color: darkgray;
+}
+
+.fa-question-circle:before {
+    /* content: "\f059"; */
+    color: darkgray;
+}
+
+.fa-heart:before {
+    color:crimson;
+}
+.fa-chevron-circle-right:before {
+    color: darkgray;
+}
+    </style>
+   <body class="p-3 m-0 border-0 bd-example">
+
+    <!-- Example Code -->
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a href="#"><img src="valorantlogo.png" style="border-radius: 50%; width: 18%; "stralt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AQUOS STORE</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produk Kami
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="ml.html">MOBILE LENGEND</a></li>
+                  <li><a class="dropdown-item" href="pubg.html">PUBG MOBILE</a></li>
+                  <li><a class="dropdown-item" href="codm.html">CODM MOBILE</a></li>
+                  <li><a class="dropdown-item" href="valorant.html">VALORANT</a></li>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
+      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+        <div class="col hp">
+          <div class="card h-100 shadow-sm">
+            <a href="#">
+              <img src="https://media.karousell.com/media/photos/products/2022/12/9/akun_valorant_1670554109_74f7342c" class="card-img-top" alt="product.title" />
+            </a>
+    
+            <div class="label-top shadow-sm">
+              <a class="text-white" href="#">Gold</a>
+            </div>
+            <div class="card-body">
+              <div class="clearfix mb-3">
+                <span class="float-start badge rounded-pill bg-success">Rp.750K</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link">reviews</a></span>
+              </div>
+              <h5 class="card-title">
+                <a target="_blank" href="#">Akun Valorant Rank Gold 1, Video Game, Game di Carousell
+                  Gambar bisa saja memiliki hak</a>
+              </h5>
+    
+              <div class="d-grid gap-2 my-4">
+    
+                <a href="#" class="btn btn-warning bold-btn">add to cart</a>
+    
+              </div>
+              <div class="clearfix mb-1">
+    
+                <span class="float-start"><a href="#"><i class="fas fa-question-circle"></i></a></span>
+    
+                <span class="float-end">
+                  <i class="far fa-heart" style="cursor: pointer"></i>
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col hp">
+            <div class="card h-100 shadow-sm">
+              <a href="#">
+                <img src="https://media.karousell.com/media/photos/products/2022/8/7/jual_acc_kecil_valorant_1659877918_721de002_progressive.jpg" class="card-img-top" alt="product.title" />
+              </a>
+      
+              <div class="label-top shadow-sm">
+                <a class="text-white" href="#">Gold</a>
+              </div>
+              <div class="card-body">
+                <div class="clearfix mb-3">
+                  <span class="float-start badge rounded-pill bg-success">Rp.1.000K</span>
+      
+                  <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link">reviews</a></span>
+                </div>
+                <h5 class="card-title">
+                  <a target="_blank" href="#"> SKIN, - Ruination Bundle, Phantom, Knife, Ghost, Spectre, Guardian, - RGX 2.0 Bundle, Classic, Phantom, Spectre, OP,</a>
+                </h5>
+      
+                <div class="d-grid gap-2 my-4">
+      
+                  <a href="#" class="btn btn-warning bold-btn">add to cart</a>
+      
+                </div>
+                <div class="clearfix mb-1">
+      
+                  <span class="float-start"><a href="#"><i class="fas fa-question-circle"></i></a></span>
+      
+                  <span class="float-end">
+                    <i class="far fa-heart" style="cursor: pointer"></i>
+      
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col hp">
+          <div class="card h-100 shadow-sm">
+            <a href="#">
+              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgSEhUZEhgZGhgZGRgaGBwaGBgcGhgaGRoYGBgcIS4lHB4sIRgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHhISHzYrJSs9NDE0NjE0NDQ2NjQ0NDQ0NjQ0NjQ0NDQ0NDQ0NDQ0NDE0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAECBQAGBwj/xABCEAACAQIEAwYDBgQEBQQDAAABAhEAAwQSITFBUZEFEyJhcYEyUqEGFEKxwfBigtHhI3KS0nOissLxFVRjsxYzNf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACsRAAICAgIABQMEAwEAAAAAAAABAhESIQMxEyIyQVEEYYFxobHwI5HhFP/aAAwDAQACEQMRAD8A+fYW0mUZwM2YaEWYI7x8+cv4xChYgGZ4RrkLbMbHpR7jnMdTueJ51N5XRijyrLownUHkYOhHEbgyDBBreiLAd2eR6V3dnkelXzn5j1qc55nrRQWD7s8j0rR7HtLL95kHgbL3g0LcANOseLQRxpPOeZ612Y8z1ooLGcai+PKE+NYyKRpN2cvl8M/y8qR7s8j0o2Y8z1rsx5nrToLC3ktZTkW6G0gsVK7iZgA7T/SlTbPL6UXOeZ61Oc8z1ooVjKWrBaAtwDclmQHfYcNqHft2gGCrczaRqrLvvIAOojTgedCznmetdnPM9aMQsElvUSDEiY3jjHnT7WrAAOW6dvxJPnpz/v7K5jzPWuzHmetFBYJFYEESCOIr6t9iPtb3wGHxJi4ICOfx8ACT+Lz47HWC3y7MeZ612Y8z1pONjs/RGQ8j0oGJtuQO7gHN4swJ8MHQRxnLrw132r8/SeZ610nmetTgGR9/tpezSwULI0GYtGTUTA1zifQ+VM5DyPSvzwxPM8OPlXAnmetGA8j7x2v2imGtm7dMAbDix5KK+L/aLtq7i7huPIUfAgmFH9fOs/MeZ612Y8z1qlGhOR2Gtpr3iudoyQPWZ/f6zibaGO7R13nPB5REe/0qMx5nrXZjzPWnQrK4a2uYd4rleISM3tOlMBMPHwXiZPyDT8I9Rz48hQcx5nrXZjzPWk4hZXEomb/CVwsfjgtMmYyjaI+tRYRZPeK5EaZdDMjeeET9KtmPM9a7MeZ60YhZ2JRDHdq43nPB5REe/UUXAWl8WcfLEhOTfPplnLMa0LMeZ61Gc8z1p0FlsOgzNKgiGjNmjyiNZ5cOelF7RC+BUVCAslkQqSSTo07kRv50HMeZ612Y8z1ooLA92eR6V3dnkelGzHmetRmPM9aKCwPdnkeld3Z5HpRs55nrUZzzPWigsnB21zjODl0nQTEjNGbScuaJ0mK3rFq14onLm8M6GMqzIA5zE6xE60T7K3PBcBUNmuWlDMmfJK3JOvwjYk/witrtbC5mVps4eUByF1TdmMgTqOE+VYS5FF0aKFxts8TZvG3c7xYlWJEzHEcCCPUEEbgggEXuYsi4bluU8WdZCsykgAgtHiAjThxAWYoN0eJvU/nUAVvRlYU4t8pXNoVyxlUeGEEbcraa7+HzM1TCuQCqOwacpCsQ0TOWBrEHbkeVavYPZNu8t25euG0lvu9QuaS5cDT+T61onB2E8NvG3QOSo66eIxA/zN/qPOspc0YvF9lxhKSs802DuAgG24J1AKNJ1Akaa6so/mHMVF3Cugl0dBtLIyidYEkfwt0PKvTpg0kEYu/IEAgPIHh0XkPCv+kcqI/ZCOIfE33UawyOQInXXTTM2vman/0w/qK8GX9Z5CK7LWt232Ylkp3bm4HUtJEbGNqphuy2cxbBYgSYGwHEnh/cVvGSlHJdGck06YkuEcjMEciJkI0RBMzG0AmfI1Z8HcUFmtuoG5KMAJiJJGm4616BewccqAqmIVBoIDwAZ0AB/iPWuu9j40qQ4xBVtw5eDJ4hjrsOlFio81lrstPHBxoSQRuI1HlQrNnN5VQhbLXZa0UwBbRZPoKL/wCjvJGRpG4y7fuD0p0S5RXbM1MI5GZUdhzCsRp5gRVHtkEqwKkGCCIII3BB2Nba4O+iGHe2kkFQ+XXj4A08Bw4Us+CdyXOdydS0Fp9+NGLGpJ9MzIqQOn5eYrQPZzfK3+k0P7qBrNIdizpHr9BGk9RVIptUz7mICj6VcYQc/pQAjlolrDO/wIzxE5VLRO0wOMHpTgwg5/Sj4bDODFtnBMTkzCYmJy7xJ608X7BZlvh3AzMjKCSASpAJBIIBPGVYfynlVMta2ItOfDcdzB+FiTBGbgTv4m/1HmaD9zHP6UV8hZn5KjLWl9zHP6UO9hsomZ1ooLEctdlp63hZAM1b7mOf0ooLM9bZJAAJJIAAEkk6AADc0ZcBdOotOZiIRjM/DGnHhzppcLBBDEEEEEbgjUEedGNy7v31yREHO0iCCIM6QQOgpMZmjBvAItuQYg5Gg5tFgxrPDnQ3QgwwKnTQiDqJGh8iD71pJcdYC3nAWIAcgCNoE6RQnw+Y5mcsYAk66ABQJ5AAD0FIBCK6Kd+6DnUHCjnQAlFdFXiuigBns8D8UxmExvHGJ4xTEUDAtGsTBBg7GOB8qPc1Mxl8hMD08VZS7KQhdXxN6n86gLR7ieJvU/nUZa3og9F9jG1dfmu4Sfa4/wDWtjBm+2dWZySxRANSWacgVU1JGXUcmB4Vj/ZLRmP/AMmF/wDsatte2UtYqGJHc3HZtCoCFu7dgwHAEmea1w8kU5yv7HTFvBUaGFwOJZAXBEKGlnKEgMEJABOk8DzNUxGGXu2uHEBmNq4RbD6+IEZSAxmFltRTfaQtvkayjXM5BUhyxDCYVQJmcrbDjSnZ+MGJXEKuFNprfxsyABZTKqgqYzHeOQJ405Si4Ol+xpb0eT+0yeDCn5rTH/nNAwl50Je27WzoCVbLxDAT6qCPNRT/ANqB/hYL/gN/1mlrMhHXITmCweUGf36VtwL/ABL8nNN+Zhz25iWMnE3NNiXYkaaeKZ6UZe3MSZVsVeeREd7clp3EZoPGBvp7UglgkiVaJEwJMTw86tcwozEMr5J00AcqG6Ax6wedW+NVoUZO9gb7FmljJga8SAABPPSKTwi6n0rUvAsR4SIEcST5knjSWDSSYE6CtIrRDewyysjQyNQf1ANGTFMNIEbcdutTcQnZSNOR9vpFVFo8j0qtrVkOMZdotfxhdYX4WHnI1PnH/igYbEEJlUys6iTMqeYI9fem7eGkfA4AWFyrPiG2bbTeSNaD93InwkaydOPnVPkfQlCMVSRyYplbMrMp0zazIkTw5ClWXf3pnuTyPSua0YOh25VLdlJKO0jPwib+3602qxwmq4NCZ0nb9aduKzGcseggdPSKW0ylVWKNbDMWMjaIg7DTQ8OFXtFljxDiSMojeQB5UcWTyPSrJZbcKTHkY961jyyXuLQot0lmzAGAdIj4hofMDl5VRnuLCQRpEkaGOM8tRWriUEkJbyrqFJVg5UkEZpYgHQbUNkY/h9TBknXX6/lR4ju0w8tUZqWmBEnMDPtXYm34ff8ArWmMOeR6UHF2CF24/wBal2+yXIVwggCVDaHRpgb6+EjUb+1FXLxUR5E/1q1u22VSonnvtrMedEayeR6VDjtlXoAuXio9p/3b0QNZ/Ej+zb+s1xtHkelR93Y7KT7Gk4hZq/8AryyAqXF1Bk33B6gH8qTxXd3znZ3tOdjcfvLZg7FwoZN9ypXmRvSuIw8Mcivlk5c6w0cMwGkxyoYRhwPEdajCtotS+S2IwSplC3UuEiW7sMVU/LmIGY+mnnUYzCIqZgXzSAQyBRBWZAzFuWpA99Yo1tuINUe2YOh2/r/ein8ha+DIy1GWi5a7LV0QThxvRxQrI3owrKXZa6K3E8R9T+dVy0xcXxH1P51QrW9EGx9mxAuNyfDno7mvTdv30GJdLYVHVHy3Siu1vM4LhQ2kseJ1hmywd/LdlGLV8/8AC/N6a7bxTm/eIE+N0jhGbSI4/wBa87lT8V0dnC1irH8J2q9lrOIuuMuqanRAFFtyMsa+ENvJC+YNaSXGm2oIUXHzXAAPG/d5Z+HMIgiZMwPSsPs2y9tHt3EFzRXUyGUlQJRgToZ189TBitTsvuSbT5WVyUGVmbh4Jj4c0EA+nlUS5bVJ3qjadJW1RhfaDWzg/Kx/3ms4Nc5n6VodrmUw4+W3H/MaAxgagn0E/rXb9PriV/c4OTcnQFLl0bMw9CKs1y6d2Y+pFWW8Plb6f1q6XlmD4fWtVNEUwU3OZ+lCshh8GlaIWgYZN60EDm5zP0qQbnM/SmXRuBA/ln9aqEccQ55RlG41nXzqW/sP8gluXRs7D3qrNcO7HqKL4+IEcdQT6xlHSgveaQBrOm0TUPkS7Q1G/c6bnM/SuJfiT9KPcYqhYqMw1Oukcfp51dRKg8xPUVaduhNCdgMJyGNpowNzmfpRMKm/t+tNog2Omo1nQDjIAJ5VT0ShIG5zP0q6PcGzMPQ041tQQJnjmExvttM+0UcpaCzmcmNgmnuT+Ue9Tkvj9iqZnF7p3Zj71dFfmfpW9b7LQor97MzIhBlMSFJa4IMZt+XGaWdEBi2xuRocoUweQOYA+xNC5IvS/gTi6EkR+Z+lUxNt48W1alkyQMpGuxiRoSCRyOWKrjk8PvWsafRg7TMTK4HhJj2qr95zP0p1wQBCFt9sumvmRVGJ+Ruqf7qltWaIRPecz9Kr3l0bMw9DFO+L5D1X+tCLAmM6W+BDEEg+eVvpUSkorZcU2JvcunQsx9TQybnM/SmnYD8aeRzKAR7tQxfXi6ezrH/UazXJFl4tAC1zmfpVGa5zP0pvvU+cdZrjlIOVpp5RboWLMgrXRRitRlqqEDQb0QVUDerisJdlroZuL4j6n86GVpl11PqfzoZWupoyQ3gjFjEefdfm9ba4Ve8a6QGLEEA7AwNfXTeq/ZLsi3iEvpdvCwB3RBlfFrcn4jwgda3m+x+Hj/8AoMfLOnT4q836is2mzq4pOKTMtbBdWFxUkzB1PodqumBcOjq1sKhTSDsrAsRyYimx9k7HHFuf57XX46Y//DMN/wC+n+ZP91YRjxxf/DaXPNqjxnaS/AOSsP8AmNSqVq/ajstLDW0t3e+BQ6ypjxbeE1njEj5Pr/avV4d8aaOGb8zKBKnJzFGTFKN7Yb3qWxSn8AHoa1oixezYCiBMTx4eQqmGXemfvI+T6/2oVhwu4zUKNKgbsuqDccfXhpsasEqwxA+Qdf7UW3cBIGUCSBJOgkxJ02oUWkDdieKRisINSQJ5A8a69hFZch02gjcR+/rW2toACRaJgn49dBMGBA3+lCxKBdYQzpCPmj9xU4pseVIzhb0jfhrx9a4pp7Uz3o+T61JuD5Pr/arxJsRwyb+360ZU5Tz18/yq9khZlZmKL3w+T6/2ocXdgpKqBBKuEq4vD5Pr/aj2b68UB96dMVlGtFSUIEg6xBkrInMND61OGsZWYyTmKmOCwCDHrofam2ZSNEA9Caot0D8H1pKH2DK/cOqDfjBHsYJB56gdKFibcj3oq3x8o61zXgfDEVdUZSdGV2iciAlSwkAgTxJ104VJtwAOVaFxxljLNBdxHwfWoxd2OM1SQkEqGSjLdBYLlAkgSTAEmJJjQUyEjfujrGtwRw109foaHo07Me7ZmgNhhx19Y/pW5kDSsWlggT3mmoU7nceIa8weVJX2CkrlU7ahpGoB3jzrPCLfRSm0Zq29II/flyoRtETrpB4a+540818fJ9f7UF8SPk+v9qMFr7FZmUUqpWmGWqlaqhCrDWpFS41qBXPL1M0XRouNT6n86oRRnXU+pqhFdTRkcpIUgcY38poQc8h0owFcyTWMo+Zlp6IGKfLk0y8oH578ahXJ2AqVSiosUsB5BG2E8BTYQaacp9ONKLTsHSPf0rRKoolvzA7DhiqZHV2fKJVAkloUB8866bgDWru6ISLmZSMwPgBgroRIMaHSuv28ylZgkaHkdwfYwavibnff4gUg3EDN4YC3QMtwCd/EA2k/GK5eVSjJJN7/AJOjinF3lFFbXiExoZiQJI4EgbEiDHCqYa3J50bDWSqwxB1J04TwqcMm9dkbx2cku9FygESInQacaKtsct/I/wBKD91VwQwEBtMpI1UxrEazOlETsxIjxH+Y0LJ/BXl9xhcOYzZTl55THLePKqZVmJWeUiahOzEAK+Ig7+I/pFE+46QXfyObUayD5xt+dNZ+6RLx9iO6HKoa2OVCvW8QU8OQPtoxAOu8QR7GuCHvLel4ALdzm4ylSZt5ICHL8/CiMpPtEXuibKb+1FFvy+lEspvVFwwJLOqlueXWOAM8d6uV3oqNVsoygGDAPIkD86MloGIK66bjjtQ3wqHQop9h+dDvYBGRlCICQQCVBAJEAkcaza5Pailj72aL2HQ5XQgzERJJkjQDzB6V1q0zgMLbieBRgfQgiZrEw1t2Z1aVg6PLCfEdQRqOBjzpjssXodbruSjEK5b4lM6jqetYw5OZ+yLlDjXuaN1CN1I9RFK3mjXzqGtXC6s9zNlmfDBbSASZ09o39IjEjT3roi5P1KjKUYrp2MpdQKC5CjaSQNddNao+JtgHxqdNgQT7CuwzsF8MTwmSN+MUfE2FuKbdwZgw1H105a0O90ZYpPZm3MTaJgOOHCN9uFDR0OzA6T7bUwv2esDZOpn86Vx3YCKk20zOrhwCfiAOqT8sTpWb8RK9Gqlx9bJuZRyoJvL+xQ+18DkKd1YJDTmyZfCdPjmZGvDkfKl8T2WqXEIUsjHKQJ0Jkg77f0HOoy5LfRolBpDbFTxH0oToDMQanEdlKR4Jtny29140PAYN0zhwI8MEGQfinzHCquV00T5atMSZKGVp64lLla0olMz7w1qoouJXxUIVzS9TN49Gy66n1NUKUzk1PqaqyV10c+QDJVlSmbVqZotu3lYMpIYEEHkRqDUtIaYn3R5fSoK16Z8DeFvP3+oXPkmXC5ZJ2+U/p5VhXLckliZJJPqd6UWmNO+hYCtAZPnFJ3EjajCwOZqmkwTaH8LeVSYdVmN0Dba8QYqvdpmzB83xHaAM2XNA21yqT5ilUsDmaOlgc6WKbsLYcBfmFDwyjWTFXFkc6raSatIkZtW0EwwEkk+p3o65fmFKog2nUfrRQg50Kl0Dsft3BlAzgRMDICee8VVspM5h0j6UstuiIgOoM01QthYX5hUMq/NVRbFcbYqtCB2lGsmNqswX5hVVWaq9sUNKwTZDZfmFGt4gRlzqBEfAp0OcHWJ/G3UchCLhfmHUVCWJ1WW9NaloeVGm2KBn/EUyfkUblzy5u3UchAQy/MKRupkEucg5nQdakJ5mikguxxivzClcSVjRp1rinrQLywJoAZwzLAlgKetFfmFZVlJE03bTzoSVky6NMZY+IUJss/GBSoPnVTHOikZ4sPeVI0cH2pJsvzCm/ujFSQrEcwpigNgiNww9ql11Y1dXQNlX5hVXyx8Qq7YcUvctDnSaBOzOvjSkyKdeg93TNIukZWNHi9qAKc7SSGHpSYrkl6mdEX5UemRNT6moZKsh1PrVzXYct7K2V39v1q5FTZYiY8uHrTFi/cnLb1J4BQSTwgE1E5KMXKXSNIptpLsafty6bXdnLEZC0HOVgggmY20mONYrGa37lplJVr6oREB7WRmOmwY6jUCdazO0WdXNsutzL+JVEGQCduntXNxc3HNtRds1lxSgtqjMv8KctXspkqGnSCCR66UpiWJifPhTSo2kDTj6QdveK6G2lohRUtPoae+G0yIv+XMP+6pwLFNHAuCdCZzETseWnKq2rJJ+EnnG8eVFe2QTCkDWJ3idJ860UmjN8Sqvb9SqYpXZgENsqYKmeoJ3Bqlg71cJxjXnQMOZmKbd2xxSikkZd/s+6zt3bBgD+NnB9JIOb1moTszEDYp/rb/ZW1aVxObXxMRpGhMgH0miqDyrnXFF7Zs+RrSMEW7gOTLmbxRBaGyzOXw+LVSPUVV1xCIzx3YXUw5mNPF4REa/Q1qP2Ej5zD+PNmiNMy5WyyDHP1JrU7vTKVkRBB5bEGojwO3b/QqXIqVfkxMNg7zotxcRowB3cxzG/AyKP2PnW5et3GLlQkGSQQQxBE+v0NO9mdnCyndoWYTPiM8ANOlMuDB0raPGlT9zNyu0Vtvv7UtnR5OpglT8Q1HD986m2SZj971CKwUBvEY1MRNbNtO0yEDuWEMabciQPpS+IcIjMM2xgAtqYgAAfvjTLA8qC9ktAy5oMjfkRsPWk+SXyNRj7oz7dtrqF3ZgHAIUk6GTqZ4HSuwGHV01zowJVgHb4gdeMVo30IY5VYLJy5viidJjSfSqKp5UeI+7HSSpIz8NhrqXBDFkLSQSdtYOunAda077ae9WVTyoWJBA96WTb2JpfAW08LPKToJOnIcaYt3DlgMdRpMyJ48D9aUsLIE5gP4Yn6g6UYTyqXTewa0NtjrgCqpVYEfDM9T69ahcfc4lT5QB+h/fQqmeVXw8T41cjT4Yn4hO4+XN7xSxiukJtvTHExbsq2yBACic3KAZBGojhzijXHdCxygh+DEjhExGtI5isZQytp8XsdB6g+0VZ77tGdswExpzrPw/NaG5eVL9SrJMl4Yn2A9BB/OgtoI30opnlQXQxtWqSXRm227Zmuam2anu6sEiroRldsfEPSkBTvap8Y9KRFcXJ62dPH6EehNzX3NXD1nXLniPqaMl2uqzncTRstv7frWr9nbZbE2wsSGza8l8R+grCw90iYjhv70cdoFNYThqy7cN5rLmWcXH5VGnG8ZJnrftDb7q8puKHsvmygggIxCgrAgDmDprE15jtf8A/c/D4OAH4F4LoKSxHbDgEmyGQZvGEJU5dGO+wM7/AC9ZOKLwcqD0XL1Fcf0303hSu7tHTzTcopNUBv8ACj2s/M9aXxDkkTHHaju7gf4a5iRoQ6rlOkEhlOYb6aV3ylirqznSt1dDQzj8R61Vnfix60LPcCy6PPEi6nuYFomPLU0tcxcHTvGGoJZECgjgCpltuQ04DaofOl2mvwWuJvpr/Y21x+Z60sL5Gxiu7+QDBE8DvWd3taKSZGNGmMU3zHrRExTfMetZS3KOlymmKjWt4p/mPU0Zb7fMetZtp6ZR6tCY537fMetVe+3zHrS+eqs9MC/eEbGKG+Ib5j1obPS7vSY0EfEt8x60I4t+DHqaXd6EXrNsdDZxTnd2PuasmIb5j1pMNREamgHRiG+Y9aq94nQkn3oOaqO9OxUNJceNCY9at3j8z1oNpvCP3xomalY6J7x+Z60fDXypOdWflDlYPPTel81WBpXYUM38RIGRWUyZJctI4DyihrcfmetXwmGZ2iQij43bRUHEsf0pe8+rC2ZgkBzop31C7kdKl8ijrseF7GBcfmetSGfmetJ2EcGWfNpBGUDoZ01/Km1erjJvtURKCXTJVasy0NHqzPWpjRh9rjxj0pEU92qfGPSkRXDyetnXD0oYuP4j6n86Mj0tc+I+p/OiWzWxDWjQwzb+1Dx7qELPJUEGBxIII+tRZxIWdA0xVz2isFWtI4PzCfb0oYooJhsZbW0blzMsBZAmZbRSxBgjx6zyqwaht2mrAq1i2VJBIIJBjmDpwqX7QBiLSJHy6VnxwcbNeSSlRTENtTBueNFKkgknNr4SNRt+vnSd67mjTLTKY6PwD9+1aNWqMk6Ne2pcGCoiPidV35ZiJrNx9kRDZSDOzA8BrpsdahO0QPwKfWgYjtAH8Cj0oewjoSsZlBDR5Qes0mHpu7jf4B1/tWcKhLFUaN3sZV6PbuUiGolt6pMGjWt3KYW7WWtyri/VqRFGkb9UN6kO8ru8ozDEbe7QHuUIvVGak5DSOZ6gGqGrLU2UXBoiGqAVINUINnqjNVc1VmnYh2yfCP3xpizaLbFR/mdE/wCsilLOJgAZAY4/sUUYsfIP37VNMejUt9n2wM13EIg+W2GuMfIZRlHu1RcxdtNLKN/mY+I/zDVR5KF/zEVlnGD5B+/apTHAGcinyO1S4t9sdr2GsVcee7YrCEgKhGQQd1y6N/m19aDmob44H8Cj0/8AFVGM/gH79qqMa6E3YcGrBqB97/gH79qn73/AP37VSslkpcqTdpUNXFquyMRTHtLe1LCi4pvFQRXHP1M6I+lEvc8RlgPEfwk8TxBqVfQE3FEiYyOSPIxXV1W2yUc92I8ameSvpv5eVctwGPGBO/gfTSeG+uldXUsmVSJZ4Bh1J5BX10mAfp1oS4p+Q6VNdVWxNIuMU/IdDU/en5Doa6uotkUhtD4UJcEtqVEyNDoeXCocV1dTj0S+xe6lL5amuoKicVrlqa6gonPXK9dXUhjCGjqldXUEshrZqhWurqYyAlFVK6upoTLZKgpXV1UIqRXAV1dSGSKsWqK6mIqXqM9dXUhkhqsDXV1NCZeurq6mIiahjU11UAhiDrQxXV1ckvUzaPR//9k=" class="card-img-top" alt="product.title" />
+            </a>
+    
+            <div class="label-top shadow-sm">
+              <a class="text-white" href="#">Ascendant 1</a>
+            </div>
+            <div class="card-body">
+              <div class="clearfix mb-3">
+                <span class="float-start badge rounded-pill bg-success">Rp.2.500K</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link">reviews</a></span>
+              </div>
+              <h5 class="card-title">
+                <a target="_blank" href="#">worth 4.500.000, RANK Ascendant 1</a>
+              </h5>
+    
+              <div class="d-grid gap-2 my-4">
+    
+                <a href="#" class="btn btn-warning bold-btn">add to cart</a>
+    
+              </div>
+              <div class="clearfix mb-1">
+    
+                <span class="float-start"><a href="#"><i class="fas fa-question-circle"></i></a></span>
+    
+                <span class="float-end">
+                  <i class="far fa-heart" style="cursor: pointer"></i>
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col hp">
+            <div class="card h-100 shadow-sm">
+              <a href="#">
+                <img src="https://media.karousell.com/media/photos/products/2022/7/24/jual_akun_valorant_1658634877_6ba51a5e" class="card-img-top" alt="product.title" />
+              </a>
+      
+              <div class="label-top shadow-sm">
+                <a class="text-white" href="#">Gold</a>
+              </div>
+              <div class="card-body">
+                <div class="clearfix mb-3">
+                  <span class="float-start badge rounded-pill bg-success">Rp.600K</span>
+      
+                  <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link">reviews</a></span>
+                </div>
+                <h5 class="card-title">
+                  <a target="_blank" href="#">Akun Valorant collector edition Glitchpop axe (eps2 act:123)</a>
+                </h5>
+      
+                <div class="d-grid gap-2 my-4">
+      
+                  <a href="#" class="btn btn-warning bold-btn">add to cart</a>
+      
+                </div>
+                <div class="clearfix mb-1">
+      
+                  <span class="float-start"><a href="#"><i class="fas fa-question-circle"></i></a></span>
+      
+                  <span class="float-end">
+                    <i class="far fa-heart" style="cursor: pointer"></i>
+      
+                  </span>
+                </div>
+              </div>
+            </div>
